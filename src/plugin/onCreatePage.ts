@@ -103,7 +103,7 @@ export const onCreatePage = async (
   } catch {}
   createPage(newPage);
 
-  await BP.map(alternativeLanguages, async (lng) => {
+  await BP.map(languages, async (lng) => {
     const localePage = await generatePage({
       language: lng,
       path: `${lng}${page.path}`,

@@ -15,7 +15,7 @@ export const useI18next = (ns?: Namespace, options?: UseTranslationOptions) => {
   const {routed, defaultLanguage} = context;
 
   const getLanguagePath = (language: string) => {
-    return language !== defaultLanguage ? `/${language}` : '';
+    return language ? `/${language}` : '';
   };
 
   const removePrefix = (pathname: string) => {
